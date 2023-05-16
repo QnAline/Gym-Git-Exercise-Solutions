@@ -1,0 +1,8 @@
+.grid-container{
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 0px 366px;
+ grid-gap:10px;
+ grid-row-gap:10px;justify-content: center;
+
+}

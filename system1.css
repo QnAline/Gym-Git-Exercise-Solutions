@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(144, 171, 228);
+    text-align: center;
+    margin-top: 3%;
+}
+img{
+  border-radius: 50%;
+}
+input{
+  
+    width:85%;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    background-color: aliceblue;
+    color:black;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 4.5%;
+    margin-left: 5%;
+}
+button{
+    background-color: rgb(6, 4, 43);
+    color: white;
+    text-align: center;
+    border-radius: 40px;
+    width: 35%;
+    height: 50px;
+    margin-left: 8%;
+
+}
+h2{
+    color:rgb(92, 41, 41);
+    margin-left: 8%;
+    display: grid;
+    justify-items: start;
+}
+#phone{
+    font-size: 30px;
+    margin-left: 5%;
+    padding-bottom: 4%;
+}
+h3{
+    font-size: 20px;
+}
+form{
+    border:none;
+    width:28%;
+    border-radius: 10px;
+    background-color: rgb(248, 250, 252);
+    justify-content: center;
+    margin-left: 36%;
+    margin-top: 1%;
+}

@@ -1,0 +1,51 @@
+.grid-container{
+    display:grid;
+    grid-template-columns: 63px 250px 3fr 0.8fr 0.6fr 0.2fr;
+    grid-gap:0px;
+    background-color: rgb(55, 146, 189);
+    padding-top: 6px;
+    margin-top: 0px;
+    grid-area: header;
+    position: relative;
+    height: 62px;
+    
+}
+img{
+    border-radius: 50%;
+  }
+  .item3{
+   
+        box-sizing: border-box;
+        border: none;
+        background-color: aliceblue;
+        color:blue;
+        height: 30px;
+        width: 65%;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 10px; 
+        padding-top: 2%;
+        padding-bottom: 3%;
+        margin-top: 6%;  
+       
+  }
+ .item4{
+    box-sizing: border-box;
+    padding-top: 2%;
+        border: none;
+        background-color: aliceblue;
+        color:blue;
+        height: 30px;
+        width: 80%;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 0%;
+        border-radius: 10px;
+        padding-bottom: 3%;
+        margin-top: 8%;  
+       
+ }
+ body{
+    background-color: azure;
+    margin: 0;
+ }
