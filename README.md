@@ -114,7 +114,7 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
  
-<!-- CREATING AND STASHING HOME PAGE CURRENT CHANGES  -->
+<!-- STASHING HOME PAGE CURRENT CHANGES  -->
  LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (dev)
 $ git stash -u
 Saved working directory and index state WIP on dev: 493b0d8  Changing all file n
@@ -147,6 +147,20 @@ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (dev)
 $ git stash -u
 Saved working directory and index state WIP on dev: 493b0d8  Changing all file n
 ames to start with a capital letter
+
+<!--  STASH LIST-->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (dev)
+$ git stash list
+stash@{0}: WIP on dev: 493b0d8 Changing all file names to start with a capital l
+etter
+stash@{1}: WIP on dev: 493b0d8 Changing all file names to start with a capital l
+etter
+stash@{2}: WIP on dev: 493b0d8 Changing all file names to start with a capital l
+etter
+stash@{3}: WIP on dev: 493b0d8 Changing all file names to start with a capital l
+etter
+
+
 
 <!-- STASH POP RESTORE TO ABOUT PAGE -->
 On branch dev
