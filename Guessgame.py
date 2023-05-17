@@ -2,7 +2,7 @@
 # we will use loop to execute indefinetly
 
 import random
-score=10
+score=5
 random_number=random.randint(1,10)
 while True:
     entered=int(input('enter a number'))
