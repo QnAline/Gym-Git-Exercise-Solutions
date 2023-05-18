@@ -963,8 +963,12 @@ $ git push --set-upstream origin ft/faq-page
 Everything up-to-date
 branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
           
+          
+          
 
 ### BUNDLE 3 EXERCISES 2 
+          
+          
           
 <!--  IN ft/faq-page CREATING ft/home-page-redesign, IN MAIN I MADE CHANGES, COMMITTED AND PUSHED THEM  -->
           
