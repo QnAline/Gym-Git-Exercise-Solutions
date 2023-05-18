@@ -651,11 +651,322 @@ On branch ft/service-redesign
 Your branch is up to date with 'origin/ft/service-redesign'.
 
 nothing to commit, working tree clean
+          
+          
+
+## BUNDLE 3 EXERCICES 1
+
+          
+<!--CREATING NEW BRANCH ft/team-page,team.html committing  -->
+ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git branch ft/team-page
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git branch
+  dev
+  ft/bundle-2
+* ft/service-redesign
+  ft/team-page
+  main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git status
+On branch ft/team-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git commit -m " new changes to team.html"
+[ft/team-page 50c839b]  new changes to team.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+         
+<!--   PUSHING AND CREATING AN PR         -->
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 419 bytes | 104.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+          
+<!--  CHECKOUT MAIN BRANCH          -->
+          
+ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+<!--    CREATING ft/contact-page BRANCH         -->
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git branch ft/contact-page
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/service-redesign
+  ft/team-page
+* main        
+ 
+<!--    IN ft/team-page TAKING LAST COMMIT        -->
+
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git log --oneline
+50c839b (HEAD -> ft/team-page, origin/ft/team-page)  new changes to team.html
+66b70b1 (origin/ft/service-redesign, ft/service-redesign) Updated services.html
+d78f73c updated text on service
+d84ffac Difficult
+5917e4b (origin/main, main, ft/contact-page)  Changing againservice to html in this main branch
+ebcda22 Commiting inorder to reach to main
+39b274d  committing changes to services.html
+28c047b Merge pull request #1 from QnAline/ft/bundle-2
+be5675c Merge branch 'main' into ft/bundle-2
+05ea163  Making pull request on our services page
+361af3b (origin/dev, dev) commiting current changes to home and about page
+52d9979 Update README.md
+8f4ed68 Update README.md
+945a54e Add files via upload
+493b0d8  Changing all file names to start with a capital letter
+d82d70b updated text for systemactivate.html
+4725558 guessgame changed to Guessgame.py
+4c2dcd6  Commiting all my files by adding, renaming or editing
+386ce90 Create README.md
+
+50c839b          
+          
+<!--      Checkout ft/contact-page, GIT CHERRY-PICK TO GET LAST COMMIT OF ft/team-page     -->
+       
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/team-page)
+$ git switch ft/contact-page
+Switched to branch 'ft/contact-page'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git cherry-pick 50c839b
+[ft/contact-page 5e56022]  new changes to team.html
+ Date: Thu May 18 22:43:02 2023 -0700
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+<!--   ADDING NEW CHANGES TO contact page and commit, push AND CREATING PR     -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git add contact.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git commit -m "NEW CHANGES TO THE CONTACT PAGE"
+[ft/contact-page 770a629] NEW CHANGES TO THE CONTACT PAGE
+ 1 file changed, 14 insertions(+)
+ create mode 100644 contact.html
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 885 bytes | 11.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/ft
+/contact-page
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+  
+<!--  IN ft/contact-page CREATING ft/faq-page ,faq.html page ADD CHANGES ,COMMIT AND PUSH THEM     -->
+          
+ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git branch ft/faq-page
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/contact-page)
+$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/faq-page)
+$ git add faq.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/faq-page)
+$ git commit -m " CHANGES TO THE FAQ PAGE"
+[ft/faq-page f96d22a]  CHANGES TO THE FAQ PAGE
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 473 bytes | 236.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/ft
+/faq-page
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+          
+<!--   REVERT LAST CHANGES OF ft/team-page,PUSH AND CREATING AN PR         -->
+ 
+Revert " new changes to team.html"
+
+This reverts commit 50c839b5035cb796b6e64625c420539a56e55d78.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch ft/faq-page
+# Your branch is up to date with 'origin/ft/faq-page'.
+#
+# Changes to be committed:
+#       deleted:    team.html
+#
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+.git/COMMIT_EDITMSG [unix] (00:14 19/05/2023)                          1,1 All
+"/d/pproject/PROJECT/.git/COMMIT_EDITMSG" [unix] 13L, 370Bm
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git log --oneline
+2f86d7a (HEAD -> ft/faq-page) Revert " new changes to team.html"
+f96d22a (origin/ft/faq-page)  CHANGES TO THE FAQ PAGE
+770a629 (origin/ft/contact-page, ft/contact-page) NEW CHANGES TO THE CONTACT PAG
+E
+5e56022  new changes to team.html
+5917e4b (origin/main, main)  Changing againservice to html in this main branch
+28c047b Merge pull request #1 from QnAline/ft/bundle-2
+be5675c Merge branch 'main' into ft/bundle-2
+05ea163  Making pull request on our services page
+361af3b (origin/dev, dev) commiting current changes to home and about page
+52d9979 Update README.md
+8f4ed68 Update README.md
+945a54e Add files via upload
+493b0d8  Changing all file names to start with a capital letter
+d82d70b updated text for systemactivate.html
+4725558 guessgame changed to Guessgame.py
+4c2dcd6  Commiting all my files by adding, renaming or editing
+386ce90 Create README.md
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 276 bytes | 276.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+   f96d22a..2f86d7a  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Everything up-to-date
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 
 
 
 
-
+        
 
  
  
