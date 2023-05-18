@@ -271,12 +271,6 @@ nothing to commit, working tree clean
 $ git branch ft/bundle-2 
 
 LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
-$ git branch
-  dev
-  ft/bundle-2 
-* main
-
-LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
 $ git switch ft/bundle-2
 Switched to branch 'ft/bundle-2'
 
