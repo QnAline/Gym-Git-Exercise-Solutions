@@ -1151,9 +1151,75 @@ origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
 LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
 $ git push
 Everything up-to-date
+          
 
 
+## BUNDLE 4 EXERCISE 1
+          
+          
+<!--    CHECKOUT main         -->
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git checkout
+Your branch is up to date with 'origin/main'.   
+          
+<!--     ADDING MY REPOSITORY TO ANOTHER REMOTE       -->
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git remote add git-copy https://github.com/QnAline/GITPROJECTS.git
 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git remote
+git-copy
+origin
+          
+<!--     MAKING CHANGES TO home ,COMMIT AND PUSHING THEM TO ORIGIN AND GIT-COPY REMOTES     -->
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git add home.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git commit -m "Making changes to html in both remote"
+[main 62a3b0c] Making changes to html in both remote
+ 1 file changed, 1 insertion(+)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git push origin
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 817 bytes | 817.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git/
+   e7669e2..f36596c  main -> main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git push git-copy
+Enumerating objects: 92, done.
+Counting objects: 100% (92/92), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (90/90), done.
+Writing objects: 100% (90/90), 52.08 KiB | 4.73 MiB/s, done.
+Total 90 (delta 50), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (50/50), done.
+To https://github.com/QnAline/GITPROJECTS.git
+   6e252c0..4a5dee7  main -> main
+
+        
 
         
 
