@@ -259,7 +259,334 @@ Your branch is up to date with 'origin/dev'.
 nothing to commit, working tree clean
  
  ## BUNDLE 2 EXERCICES 2
+<!-- TO CHECKOUT MAIN  AND PULL LAST CHANGES  -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git pull origin main
+From https://github.com/QnAline/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+   493b0d8..28c047b  main       -> origin/main
+Updating 493b0d8..28c047b
+Fast-forward
+ Guessgame.py  |   2 +-
+ README.md     | 299 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    |  18 ++++
+ home.html     |  39 ++++++++
+ services.html |  18 ++++
+ 5 files changed, 375 insertions(+), 1 deletion(-)
+ create mode 100644 README.md
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+<!-- NEW BRANCH ft/service-redesign  -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git branch ft/service-redesign
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+<!-- NEW CHANGES TO services.html  -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ 
+<!-- COMMITTING AND PUSHING THEM  -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git add --all
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git commit -m " committing changes to services.html"
+[ft/service-redesign 39b274d]  committing changes to services.html
+ 1 file changed, 8 insertions(+)
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 317 bytes | 63.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Everything up-to-date
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+nothing to commit, working tree clean
+ 
+<!-- NEW CHANGES TO service.html IN MAIN BRANCH -->
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git add --all
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git commit -m " Changing againservice to html in this main branch"
+[main 5917e4b]  Changing againservice to html in this main branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+<!-- COMMITTING AND PUSHING AGAIN THOSE CHANGES IN MAIN  -->
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git remote set-url https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git push -u --set-upstream origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+   28c047b..5917e4b  main -> main
+branch 'main' set up to track 'origin/main'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+<!--CHECKOUT ft/service-redesign branch  -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git diff ft/service-redesign..main
+diff --git a/services.html b/services.html
+index 8ecade9..2cd434c 100644
+--- a/services.html
++++ b/services.html
+@@ -7,13 +7,12 @@
+     </head>
+     <body>
+         <p>
+             changing dolor sit amet consectetur adipisicing elit.<br>
+          
+-            NEW CHANGES ipsum dolor sit amet consectetur adipisicing elit.<br>
+   
++            changing dolor sit amet consectetur adipisicing elit.<br>
+              Nesciunt beatae recusandae esse voluptatem repellat labore assumenda,<br>
+               possimus corrupti nostrum. Cum nihil similique magnam soluta,<br>
+                ad aut vero consequatur veniam iste sunt autem tempore illum dolor<br>
+                 est officiis voluptas commodi quam nulla, id amet dolorem distinctio fugiat. <br>
+                 Itaque provident natus odit.
+         </p>
+-
+     </body>
+ </html>
+\ No newline at end of file
+
+
+<!-- merge the main branch with ft/service-redesign branch and commit and push CHANGES AGAIN  -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .services.html.swp
+        .services_BASE_2118.html.swp
+        .services_LOCAL_2118.html.swp
+        .services_REMOTE_2118.html.swp
+        services_BACKUP_2118.html
+        services_BASE_2118.html
+        services_LOCAL_2118.html
+        services_REMOTE_2118.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign|MERGING)
+$ git reset
+Unstaged changes after reset:
+M       services.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/service-redesign)
+$ git add -p
+diff --git a/services.html b/services.html
+index 8ecade9..4150f5a 100644
+--- a/services.html
++++ b/services.html
+@@ -7,7 +7,11 @@
+     </head>
+     <body>
+         <p>
++<<<<<<< HEAD
+             NEW CHANGES ipsum dolor sit amet consectetur adipisicing elit.<br>
++=======
++            changing dolor sit amet consectetur adipisicing elit.<br>
++>>>>>>> main
+              Nesciunt beatae recusandae esse voluptatem repellat labore assumenda,<b
+r>
+               possimus corrupti nostrum. Cum nihil similique magnam soluta,<br>
+                ad aut vero consequatur veniam iste sunt autem tempore illum dolor<br
+>
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]?
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/service-redesign|MERGING)
+$ git commit -a -m "Updated services.html"
+[ft/service-redesign 66b70b1] Updated services.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 980 bytes | 980.00 KiB/s, done.
+Total 10 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 2 local objects.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+   39b274d..66b70b1  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+nothing to commit, working tree clean
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
  
