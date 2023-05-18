@@ -1,5 +1,7 @@
 # Gym-Git-Exercise-Solutions
 ## Bundle 1 Exercise 1
+
+
 <!-- RENAMING MASTER TO MAIN BRANCH -->
 LENOVO@DESKTOP-UBP6ER8 MINGW64 ~
 $ git config --global init.default branch main
@@ -97,31 +99,7 @@ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (dev)
 $ git branch
 * dev
   main
- 
- ##BUNDLE 1 EXERCISES 1
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  
  
  ## BUNDLE 1 EXERCISES 2
@@ -283,6 +261,97 @@ On branch dev
 Your branch is up to date with 'origin/dev'.
 
 nothing to commit, working tree clean
+ 
+ 
+ 
+##BUNDLE 2 EXECICES 1
+ 
+<!--creating branch ft/bundle-2 -->
+ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git branch ft/bundle-2 
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git branch
+  dev
+  ft/bundle-2 
+* main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ git switch ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Guessgame.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git add --all
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git commit -m " Changing againservice to html in thisft/bundle-2 branch"
+[main 5917e4b]  Changing againservice to html in this ft/bundle-2 branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+<!-- COMMITTING AND PUSHING AGAIN THOSE CHANGES IN ft/bundle-2  -->
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git remote set-url https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git push -u --set-upstream origin ft/bundle-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+   28c047b..5917e4b  ft/bundle-2 -> main
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+nothing to commit, working tree clean
+
  
  ## BUNDLE 2 EXERCICES 2
 <!-- TO CHECKOUT MAIN  AND PULL LAST CHANGES  -->
@@ -467,8 +536,7 @@ index 8ecade9..2cd434c 100644
      </head>
      <body>
          <p>
-             changing dolor sit amet consectetur adipisicing elit.<br>
-          
+        
 -            NEW CHANGES ipsum dolor sit amet consectetur adipisicing elit.<br>
    
 +            changing dolor sit amet consectetur adipisicing elit.<br>
