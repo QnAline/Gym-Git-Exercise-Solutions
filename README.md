@@ -264,7 +264,7 @@ nothing to commit, working tree clean
  
  
  
-##BUNDLE 2 EXECICES 1
+## BUNDLE 2 EXECICES 1
  
 <!--creating branch ft/bundle-2 -->
  LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
