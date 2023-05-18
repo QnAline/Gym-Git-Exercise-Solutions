@@ -98,6 +98,32 @@ $ git branch
 * dev
   main
  
+ ##BUNDLE 1 EXERCISES 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  ## BUNDLE 1 EXERCISES 2
 <!-- CREATING HOME PAGE AND ADDING SOME CHANGES  -->
  LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (dev)
