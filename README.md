@@ -1222,18 +1222,156 @@ To https://github.com/QnAline/GITPROJECTS.git
 
         
 
-        
+## BUNDLE 4 EXERCISE 2
+          
+<!--   CHECKOUT ft/footer, CHANGES AND ANOTHER CHANGES BOTH COMMITTED          -->
+          
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/bundle-2)
+$ git checkout ft/footer
+Switched to branch 'ft/footer'
+Your branch is up to date with 'origin/ft/footer'.
 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git status
+On branch ft/footer
+Your branch is up to date with 'origin/ft/footer'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git add footer.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git commit -m " editing footer"
+[ft/footer 08e1340]  editing footer
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git status
+On branch ft/footer
+Your branch is ahead of 'origin/ft/footer' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git add footer.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git commit -m " editing footer again"
+[ft/footer bd6fd68]  editing footer again
+ 1 file changed, 1 insertion(+)          
+    
+
+<!--  CREATING A PR -->
+        
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git remote -v
+git-copy        https://github.com/QnAline/GITPROJECTS.git (fetch)
+git-copy        https://github.com/QnAline/GITPROJECTS.git (push)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 623 bytes | 124.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+   ea759b3..bd6fd68  ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
  
  
+<!-- CHECKOUT main AND CREATING ft/squashing ,SQUASHING CHANGES TO ft/footer AND COMMIT  -->
+ 
+ $ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git merge ft/footer
+Merge made by the 'ort' strategy.
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/squashing)
+$ git merge --squash ft/footer
+Updating 4a5dee7..bd6fd68
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md   | 66 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ footer.html | 12 +++++++++++
+ home.html   |  2 ++
+ 3 files changed, 80 insertions(+)
+ create mode 100644 footer.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 30a3630] footer changes squashing
+ 3 files changed, 80 insertions(+)
+ create mode 100644 footer.html
  
  
+<!--  ANOTHER PR FOR ft/squashing-->
  
- 
- 
- 
- 
- 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/squashing)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/squashing)
+$ git remote -v
+git-copy        https://github.com/QnAline/GITPROJECTS.git (fetch)
+git-copy        https://github.com/QnAline/GITPROJECTS.git (push)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/squashing)
+          
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.07 KiB | 548.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
  
  
  
