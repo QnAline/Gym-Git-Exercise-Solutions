@@ -962,6 +962,195 @@ LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
 $ git push --set-upstream origin ft/faq-page
 Everything up-to-date
 branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+          
+          
+          
+
+## BUNDLE 3 EXERCISES 2 
+          
+          
+          
+<!--  IN ft/faq-page CREATING ft/home-page-redesign, IN MAIN I MADE CHANGES, COMMITTED AND PUSHED THEM  -->
+          
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git branch ft/home-page-redesign
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+* ft/faq-page
+  ft/home-page-redesign
+  ft/service-redesign
+  ft/team-page
+  main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/faq-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git add home.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git commit -m " RECHANGING IN HOME.TML "
+[main 2992530]  RECHANGING IN HOME.TML
+ 1 file changed, 1 insertion(+)
+          
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/QnAline/Gym-Git-Exercise-Solutions
+.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git fetch origin main
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 21 (delta 13), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (21/21), 9.61 KiB | 11.00 KiB/s, done.
+From https://github.com/QnAline/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+   5917e4b..9caccbb  main       -> origin/main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git merge origin main
+merge: origin - not something we can merge
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git fetch origin main:tmp
+From https://github.com/QnAline/Gym-Git-Exercise-Solutions
+ * [new branch]      main       -> tmp
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git rebase tmp
+Successfully rebased and updated refs/heads/main.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git push origin HEAD:main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 109.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/master
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      HEAD -> main
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git branch -D tmp
+Deleted branch tmp (was 9caccbb).
+                     <!--    OR        -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+   da5edc0..11892f5  main -> main
+
+
+          
+          
+<!--     IN ft/home-page-redesign TO REBASE main ,change home.html,commit,push and CREATE AN PR       -->
+ 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (main)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git add home.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ GIT commit -m " RECHANGING AGAIN HOME IN HOME-PAGE-REDESIGN"
+[ft/home-page-redesign 34e1bb5]  RECHANGING AGAIN HOME IN HOME-PAGE-REDESIGN
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git push
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.80 KiB | 141.00 KiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/QnAline/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-
+redesign
+remote:
+To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git remote set-url origin https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git remote -v
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/QnAline/Gym-Git-Exercise-Solutions.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/project (ft/home-page-redesign)
+$ git push
+Everything up-to-date
 
 
 
