@@ -1374,7 +1374,59 @@ To https://github.com/QnAline/Gym-Git-Exercise-Solutions.git
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
  
  
- 
+          
+## BUNDLE 5 EXERCISE 2
+          
+<!-- CLONING project GIT-CAFE-EXERCISE           -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject
+$ git clone https://github.com/QnAline/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 100Receiving objects: 100% (1
+Receiving objects: 100% (107/107), 1.95 MiB | 810.00 KiB/s, done.
+
+Resolving deltas: 100% (5/5), done.
+          
+<!--     EDITING index.html ,COMMIT AND PUSHING TO THE REPOSITORY WE HAVE CREATED WHILE FORKING A PROJECT        -->
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/PROJECT (main)
+$ cd D:/pproject/git-cafe-exercise
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git add index.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git commit -m "¬ changing index.html in our fork to our repository"
+[main fe02bf4] ¬ changing index.html in our fork to our repository
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 3.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/QnAline/git-cafe-exercise.git
+   d1d3f9c..fe02bf4  main -> main
+          
+          
+          
  
  
  
