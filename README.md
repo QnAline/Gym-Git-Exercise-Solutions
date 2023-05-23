@@ -1578,18 +1578,142 @@ branch 'feature' set up to track 'origin/feature'.
 
  
  
+          ## BUNDLE 6 EXERCISE 2
 
  
+<!-- CREATING A NEW BUG_FIX ,RENAME index-4 to contact, A NEW PR AND REQUESTING FOR REVIEW  -->
+ 
+ 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git checkout -b bug_fix
+Switched to a new branch 'bug_fix'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git pull origin main
+From https://github.com/QnAline/git-cafe-exercise
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git status
+On branch bug_fix
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index-4.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git add index-4.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git status
+On branch bug_fix
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    index-4.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Contact.html
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git add Contact.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git status
+On branch bug_fix
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Contact.html
+        deleted:    index-4.html
+
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git commit -m "¬ Renaming index-4 to Contact"
+[bug_fix ffd893b] ¬ Renaming index-4 to Contact
+ 2 files changed, 206 insertions(+), 410 deletions(-)
+ create mode 100644 Contact.html
+ delete mode 100644 index-4.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git remote set-url origin https://github.com/QnAline/git-cafe-exercise.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git remote -v
+origin  https://github.com/QnAline/git-cafe-exercise.git (fetch)
+origin  https://github.com/QnAline/git-cafe-exercise.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git push --set-upstream origin bug_fix
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.53 KiB | 517.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug_fix' on GitHub by visiting:
+remote:      https://github.com/QnAline/git-cafe-exercise/pull/new/bug_fix
+remote:
+To https://github.com/QnAline/git-cafe-exercise.git
+ * [new branch]      bug_fix -> bug_fix
+branch 'bug_fix' set up to track 'origin/bug_fix'. 
  
  
  
- 
- 
- 
- 
- 
- 
- 
+            ## BUNDLE 6 EXERCISE 3
+         
+          
+<!-- SMALL Hotfix ON Contact page , CHANGING A NUMBER   -->
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (bug_fix)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (hotfix)
+$ git status
+On branch hotfix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (hotfix)
+$ git add --all
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (hotfix)
+$ git commit -m "¬ Changing contact phone number"
+[hotfix 03f714b] ¬ Changing contact phone number
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (hotfix)
+$ git push --set-upstream origin hotfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hotfix' on GitHub by visiting:
+remote:      https://github.com/QnAline/git-cafe-exercise/pull/new/hotfix
+remote:
+To https://github.com/QnAline/git-cafe-exercise.git
+ * [new branch]      hotfix -> hotfix
+branch 'hotfix' set up to track 'origin/hotfix'.
+
  
  
  
