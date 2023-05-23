@@ -1426,11 +1426,156 @@ To https://github.com/QnAline/git-cafe-exercise.git
    d1d3f9c..fe02bf4  main -> main
           
           
-          
+## BUNDLE 6 EXERCISE 1          
  
  
+<!-- Adding new branch feature, adding Menu,PUSHING  and then creating PR IN A FORKED REPOSITORY  -->
  
- 
+LENOVO@DESKTOP-UBP6ER8 MINGW64 ~
+$ cd D:\pproject/git-cafe-exercise
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git checkout feature
+Switched to a new branch 'feature'
+branch 'feature' set up to track 'origin/feature'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git status
+On branch feature
+Your branch is up to date with 'origin/feature'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Menu.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git commit -a -m "¬MENU"
+[feature 7ec01ed] ¬MENU
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git remote set-url origin https://github.com/QnAline/git-cafe-exercise.git
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git remote -v
+origin  https://github.com/QnAline/git-cafe-exercise.git (fetch)
+origin  https://github.com/QnAline/git-cafe-exercise.git (push)
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git push --set-upstream origin feature
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 570 bytes | 142.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/QnAline/git-cafe-exercise/pull/new/feature
+remote:
+To https://github.com/QnAline/git-cafe-exercise.git
+ * [new branch]      feature -> feature
+branch 'feature' set up to track 'origin/feature'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git checkout main
+Switched to branch 'main'
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git merge feature
+Auto-merging Menu.html
+CONFLICT (content): Merge conflict in Menu.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main|MERGING)
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   Menu.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main|MERGING)
+$ git add Menu.html
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main|MERGING)
+$ git commit -m "¬MENNU"
+[main b97065b] ¬MENNU
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git merge feature
+Already up to date.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (main)
+$ git checkout feature
+Switched to branch 'feature'
+Your branch is up to date with 'origin/feature'.
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git merge main
+Updating 7ec01ed..b97065b
+Fast-forward
+ Menu.html                            |    2 +
+ bat/MailHandler.php                  |   86 +
+ bat/libmail.php                      |  706 ++++++++
+ bat/recaptchalib.php                 |  280 +++
+ css/animate.css                      | 3127 ++++++++++++++++++++++++++++++++++
+ css/jquery.fancybox.css              |  276 +++
+ git-cafe-exercise                    |    1 +
+ index-1.html                         |  201 +++
+ index-2.html                         |  185 ++
+ index-3.html                         |  182 ++
+ index-4.html                         |  206 +++
+ js/TMForm.js                         |  352 ++++
+ js/camera.js                         | 2273 ++++++++++++++++++++++++
+ js/device.min.js                     |   68 +
+ js/html5shiv.js                      |  325 ++++
+ js/jquery-migrate-1.2.1.js           |  523 ++++++
+ js/jquery.cookie.js                  |   98 ++
+ js/jquery.easing.1.3.js              |  207 +++
+ js/jquery.equalheights.js            |   49 +
+ js/jquery.fancybox-buttons.js        |  125 ++
+ js/jquery.fancybox-media.js          |  201 +++
+ js/jquery.fancybox.js                | 2022 ++++++++++++++++++++++
+ js/jquery.js                         |    7 +
+ js/jquery.mobile.customized.min.js   |   12 +
+ js/jquery.mobilemenu.js              |   95 ++
+ js/jquery.mousewheel.min.js          |   15 +
+ js/jquery.rd-google-map.js           |  141 ++
+ js/jquery.rd-parallax.js             |   85 +
+ js/jquery.simplr.smoothscroll.min.js |   41 +
+ js/jquery.ui.totop.js                |   44 +
+ js/jquery.unveil.js                  |   58 +
+ js/modal.js                          |  274 +++
+ js/script.js                         |  291 ++++
+ js/superfish.js                      |  317 ++++
+ js/tmstickup.js                      |   97 ++
+ js/wow.js                            |  391 +++++
+ 36 files changed, 13363 insertions(+)
+ create mode 160000 git-cafe-exercise
+
+LENOVO@DESKTOP-UBP6ER8 MINGW64 /d/pproject/git-cafe-exercise (feature)
+$ git push --set-upstream origin feature
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/QnAline/git-cafe-exercise.git
+   7ec01ed..b97065b  feature -> feature
+branch 'feature' set up to track 'origin/feature'.
+
  
  
 
