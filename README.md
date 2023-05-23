@@ -1578,7 +1578,7 @@ branch 'feature' set up to track 'origin/feature'.
 
  
  
-          ## BUNDLE 6 EXERCISE 2
+ ## BUNDLE 6 EXERCISE 2
 
  
 <!-- CREATING A NEW BUG_FIX ,RENAME index-4 to contact, A NEW PR AND REQUESTING FOR REVIEW  -->
@@ -1669,8 +1669,7 @@ To https://github.com/QnAline/git-cafe-exercise.git
 branch 'bug_fix' set up to track 'origin/bug_fix'. 
  
  
- 
-            ## BUNDLE 6 EXERCISE 3
+ ## BUNDLE 6 EXERCISE 3
          
           
 <!-- SMALL Hotfix ON Contact page , CHANGING A NUMBER   -->
@@ -1716,7 +1715,9 @@ branch 'hotfix' set up to track 'origin/hotfix'.
 
  
  
- 
+## BUNDLE 6 EXERCISE 4
+          
+          LINK
  
  
  
